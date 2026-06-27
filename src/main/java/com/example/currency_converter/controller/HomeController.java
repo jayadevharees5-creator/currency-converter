@@ -25,7 +25,7 @@ public class HomeController {
     @Value("${app.version}")
     private String appVersion;
 
-    @GetMapping("/")
+    @GetMapping("/api/info")
     @Operation(summary = "Application info", description = "Returns application metadata and available API endpoints")
     public ResponseEntity<HomeResponse> home() {
         HomeResponse response = new HomeResponse(
